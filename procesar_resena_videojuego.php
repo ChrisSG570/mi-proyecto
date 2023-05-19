@@ -56,7 +56,7 @@ if (isset($_SESSION["usuario"])) {
             mysqli_stmt_execute($stmt);
 
             // Redirigir al usuario a la página inicial
-            header("Location:inicio.php");
+            header("Location:index.php");
             exit();
         } else {
             echo "Error al insertar la reseña en la base de datos";
@@ -106,7 +106,7 @@ if (isset($_SESSION["usuario"])) {
             mysqli_stmt_execute($stmt);
 
             // Redirigir al usuario a la página del videojuego
-            header("Location:inicio.php");
+            header("Location:index.php");
             exit();
         } else {
             echo "Error al insertar la reseña en la base de datos";
@@ -117,7 +117,7 @@ if (isset($_SESSION["usuario"])) {
         echo "Falta el ID del videojuego";
     }
 } else {
-    header("Location:inicio.php");
+    header("Location:index.php");
     exit();
 }
 ?>

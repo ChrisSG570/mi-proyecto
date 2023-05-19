@@ -42,7 +42,7 @@ session_start();
                   </div>
                   <input type="submit" name="inicio_sesion" value="Login">
                 </form><br><br>
-                <p class="mb-0"><a href="inicio.php" class="text-white-50 fw-bold">Entra directamente!</a></p><br>
+                <p class="mb-0"><a href="index.php " class="text-white-50 fw-bold">Entra directamente!</a></p><br>
                 <p class="mb-0"><a href="login_usuario.php" class="text-white-50 fw-bold">Quieres entrar como
                     usuario?</a></p>
               </div>
@@ -53,7 +53,7 @@ session_start();
               </div>
 
               <?php
-              // Validación de los datos para pasarlos a inicio.php
+              // Validación de los datos para pasarlos a index.php 
               if (isset($_POST["inicio_sesion"]) && isset($_POST["nombre_prensa"]) && isset($_POST["contrasenia"])) {
                 $nombre = $_POST["nombre_prensa"];
                 $contrasenia = $_POST["contrasenia"];
@@ -70,10 +70,10 @@ session_start();
                   $result = $stmt->get_result();
                   if ($result->num_rows === 1) {
                     $fila = $result->fetch_assoc();
-                    // Creo una sesión para almacenar si es admin o no y lo redirige a inicio.php
+                    // Creo una sesión para almacenar si es admin o no y lo redirige a index.php 
                     $_SESSION["nombre_prensa"] = $nombre;
                     $_SESSION["id_prensa"] = $fila["id_prensa"];
-                    header("location:inicio.php");
+                    header("location:index.php ");
                     exit;
                   } else {
                     echo "<p style='color: red'>Ha habido un error al iniciar sesión</p>";

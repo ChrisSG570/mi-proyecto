@@ -101,7 +101,7 @@ if (isset($_SESSION["usuario"]) && ($_SESSION["admin"] == "si")) {
                     }
                     //Botón que nos lleva al catálogo
                     if (isset($_POST["salir"])) {
-                        header("location:../inicio.php");
+                        header("location:../index.php ");
                     }
 
 

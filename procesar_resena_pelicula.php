@@ -61,7 +61,7 @@ session_start();
                 mysqli_stmt_execute($stmt);
 
                 // Redireccionar al usuario a la página de inicio
-                header("Location:inicio.php");
+                header("Location:index.php");
             } else {
                 echo "Error al insertar la reseña en la base de datos";
             }
@@ -109,7 +109,7 @@ session_start();
                 mysqli_stmt_execute($stmt);
 
                 // Redireccionar al usuario a la página de inicio
-                header("Location:inicio.php");
+                header("Location:index.php");
             } else {
                 echo "Error al insertar la reseña en la base de datos";
             }
@@ -119,7 +119,7 @@ session_start();
         }
     } else {
         // Redireccionar al usuario a la página de inicio si no ha iniciado sesión
-        header("Location: inicio.php");
+        header("Location: index.php");
     }
     ?>
 </body>

@@ -41,7 +41,7 @@ session_start();
                   </div>
                   <input type="submit" name="inicio_sesion" value="Login">
                 </form><br><br>
-                <p class="mb-0"><a href="inicio.php" class="text-white-50 fw-bold">Entra directamente!</a></p><br>
+                <p class="mb-0"><a href="index.php " class="text-white-50 fw-bold">Entra directamente!</a></p><br>
                 <p class="mb-0"><a href="login_prensa.php" class="text-white-50 fw-bold">Quieres entrar como prensa?</a>
                 </p>
               </div>
@@ -74,7 +74,7 @@ session_start();
                     $_SESSION["usuario"] = $nombre;
                     $_SESSION["id_usuario"] = $fila["id_usuario"];
                     $_SESSION["admin"] = $fila["admin"];
-                    header("location:inicio.php");
+                    header("location:index.php ");
                   } else {
                     echo "<p style='color: red'>Ha habido un error al inicar sesión</p>";
                   }

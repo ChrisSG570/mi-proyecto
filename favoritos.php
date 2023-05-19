@@ -19,7 +19,7 @@ session_start();
 <body>
   <nav class="navbar navbar-expand-lg bg-dark navbar-dark">
     <div class="container-fluid">
-    <a class="navbar-brand" href="inicio.php"><img src="img/logo/logo.png" style="width: 50px" alt=""></a>
+    <a class="navbar-brand" href="index.php "><img src="img/logo/logo.png" style="width: 50px" alt=""></a>
       <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02"
         aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
         <div class="navbar-toggler-icon"></div>
@@ -27,7 +27,7 @@ session_start();
       <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="inicio.php">Inicio</a>
+            <a class="nav-link active" aria-current="page" href="index.php ">Inicio</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="mostrarVideojuegos.php">Videojuegos</a>
@@ -87,7 +87,7 @@ session_start();
       mysqli_stmt_execute($stmt);
 
       if (mysqli_stmt_affected_rows($stmt) > 0) {
-        header("location:inicio.php");
+        header("location:index.php ");
       } else {
         echo "Error";
       }
@@ -109,7 +109,7 @@ session_start();
       mysqli_stmt_execute($stmt);
 
       if (mysqli_stmt_affected_rows($stmt) > 0) {
-        header("location:inicio.php");
+        header("location:index.php ");
       } else {
         echo "Error";
       }
@@ -165,7 +165,7 @@ session_start();
     // Cerrar la conexión a la base de datos
     mysqli_close($conn);
   } else {
-    header("location:inicio.php");
+    header("location:index.php ");
   }
   ?>
 </body>
