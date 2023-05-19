@@ -51,7 +51,6 @@ session_start();
         }
 
         ?>
-        ?>
       </ul>
       <div class="navbar-text">
           <a class="nav-link" href="login_usuario.php">Login</a>
@@ -60,7 +59,7 @@ session_start();
   </div>
 </nav><br>
     <?php
-    $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+    $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
     if (!$conn) {
         die('Error de conexión: ' . mysqli_connect_error());

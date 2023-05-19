@@ -66,7 +66,7 @@ session_start();
   <h1>Todas las películas:</h1><br>
   <?php
   // Establecer la conexión con la base de datos
-  $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+  $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
   if (!$conn) {
     die('Error de conexión: ' . mysqli_connect_error());

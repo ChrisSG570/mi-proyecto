@@ -58,7 +58,7 @@ session_start();
                 $nombre = $_POST["nombre_prensa"];
                 $contrasenia = $_POST["contrasenia"];
                 // Abrimos la base de datos
-                $mysqli = new mysqli("localhost", "root", "", "MetaScore");
+                $mysqli =  mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
                 if ($mysqli->connect_error) {
                   echo "Error al conectar a la base de datos</p>";
                 } else {

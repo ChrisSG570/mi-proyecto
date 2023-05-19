@@ -63,7 +63,7 @@ session_start();
     <div class="container py-5 h-50" style="text-align:center">
         <div class="row d-flex justify-content-center align-items-center h-100">
             <?php
-            $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+            $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
             if (!$conn) {
                 die('Error de conexión: ' . mysqli_connect_error());
@@ -168,7 +168,7 @@ session_start();
                 $conn->close();
 
             } else if (isset($_SESSION["id_prensa"])) {
-                $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+                $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
                 if (!$conn) {
                     die('Error de conexión: ' . mysqli_connect_error());

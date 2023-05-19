@@ -63,7 +63,7 @@ session_start();
     </nav><br>
     <?php
     // Establecer conexión a la base de datos
-    $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+    $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
     if (!$conn) {
         die('Error de conexión: ' . mysqli_connect_error());
     }
@@ -167,7 +167,7 @@ session_start();
     }
 
     // Mostrar reseñas de usuarios para el videojuego
-    $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+    $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
     if (!$conn) {
         die('Error de conexión: ' . mysqli_connect_error());

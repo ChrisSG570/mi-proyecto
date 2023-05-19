@@ -31,7 +31,7 @@ session_start();
             $id_usuario = $_SESSION["id_usuario"];
             $texto = $_POST["comentario"];
             $nota = $_POST["nota"];
-            $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+            $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
             // Verificar si la conexión a la base de datos fue exitosa
             if (!$conn) {
@@ -79,7 +79,7 @@ session_start();
             $id_prensa = $_SESSION["id_prensa"];
             $texto = $_POST["comentario"];
             $nota = $_POST["nota"];
-            $conn = mysqli_connect("localhost", "root", "", "MetaScore");
+            $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
 
             // Verificar si la conexión a la base de datos fue exitosa
             if (!$conn) {
