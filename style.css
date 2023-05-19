@@ -1,0 +1,91 @@
+body{
+  background-color: grey;
+}
+
+
+.todo{
+  display: flex;
+  flex-wrap: wrap;
+  background-color: grey; 
+  margin-bottom: 50px;
+  border-top: 5px black solid;
+  border-bottom: 5px black solid;
+}
+
+.contenedor{
+  margin: 50px;
+  text-align: center;
+  background-color: black;
+  width: 250px;
+  color: white;
+  margin-right: 80px;
+}
+
+.contenedor img{
+  height: 60%;
+  width: 60%;
+  border: 1px white solid;
+}
+
+.presentacion {
+	display: flex;
+  text-align: center;
+  align-items: center;
+  margin: 50px;  
+  width: 95%;
+  background-color: black;
+  margin-right: 50px;
+  border: grey 10px solid;
+  border-radius: 15px;
+}
+
+.portada img{
+  height: 100%;
+  width: 50%;
+  border: 5px white solid;
+  border-radius: 15px;
+}
+
+.presentacion > div {
+	width: 50%;
+	padding: 10px;
+  background: black;
+}
+
+.info{
+  text-align: left;
+  color: white;
+  margin-right: 25px
+}
+
+.review-container{
+  margin-top: 30px;
+  text-align: center;
+}
+
+.review{
+  margin-left: 25%;
+  margin-right: 25%;
+  border-top: 3px black solid;
+}
+
+h2 {
+  text-align: center;
+}
+
+.añadir_reseña{
+  margin-top: 50px;
+  text-align: center;
+  background-color: black;
+  margin-left: 25%;
+  margin-right: 25%;
+  border-radius: 10px;
+  color: white;
+  border: grey 5px solid;
+  height: 450px;
+}
+
+.historial{
+  display: flex;
+  text-align: center;
+}
