@@ -59,7 +59,7 @@ session_start();
   </div>
 </nav><br>
     <?php
-    $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+    $conn = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
 
     if (!$conn) {
         die('Error de conexión: ' . mysqli_connect_error());

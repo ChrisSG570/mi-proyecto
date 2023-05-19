@@ -39,7 +39,7 @@ if (isset($_SESSION["usuario"]) && ($_SESSION["admin"] == "si")) {
                     }
 
                     if (isset($_POST["mostrar"])) {
-                        $mysqli = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+                        $mysqli = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
                         if ($mysqli->connect_error) {
                             echo "Error al entrar a la base de datos";
                         } else {

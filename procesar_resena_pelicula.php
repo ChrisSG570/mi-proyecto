@@ -31,7 +31,7 @@ session_start();
             $id_usuario = $_SESSION["id_usuario"];
             $texto = $_POST["comentario"];
             $nota = $_POST["nota"];
-            $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+            $conn = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
 
             // Verificar si la conexión a la base de datos fue exitosa
             if (!$conn) {
@@ -61,7 +61,7 @@ session_start();
                 mysqli_stmt_execute($stmt);
 
                 // Redireccionar al usuario a la página de inicio
-                header("Location:index.php");
+                header("Location:inicio.php");
             } else {
                 echo "Error al insertar la reseña en la base de datos";
             }
@@ -79,7 +79,7 @@ session_start();
             $id_prensa = $_SESSION["id_prensa"];
             $texto = $_POST["comentario"];
             $nota = $_POST["nota"];
-            $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+            $conn = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
 
             // Verificar si la conexión a la base de datos fue exitosa
             if (!$conn) {

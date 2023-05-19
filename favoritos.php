@@ -63,7 +63,7 @@ session_start();
   <h1>Favoritos:</h1><br>
   <?php
   // Conectar a la base de datos
-  $conn = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+  $conn = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
 
   // Obtener los valores enviados por el formulario
   if (isset($_SESSION["id_usuario"])) {

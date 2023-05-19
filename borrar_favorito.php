@@ -5,7 +5,7 @@ if (isset($_SESSION["id_usuario"])) {
     $id_usuario = $_SESSION["id_usuario"];
 
     // Iniciamos la base de datos
-    $mysqli = mysqli_connect($_ENV["DB_DB"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_NAME"]);
+    $mysqli = mysqli_connect($_ENV["DB_NAME"], $_ENV["DB_USER"], $_ENV["DB_PASSWORD"], $_ENV["DB_DB"]);
 
     if ($mysqli->connect_error) {
         echo "Error al entrar a la base de datos";
